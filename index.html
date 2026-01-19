@@ -3,129 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aamir Ahmad | Agency Specialist</title>
+    <title>Aamir Pro | Digital Marketing Expert</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --black: #080808; --red: #ff0000; --yellow: #ffcc00; --white: #ffffff; }
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-        body { background-color: var(--black); color: var(--white); scroll-behavior: smooth; }
+        :root { --bg: #121212; --card: #1e1e1e; --red: #ff3b3b; --yellow: #ffcc00; --white: #ffffff; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background-color: var(--bg); color: var(--white); padding-bottom: 50px; }
 
-        /* --- Agency Logo --- */
+        /* --- Header Design (As per Image) --- */
         header { 
-            padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; 
-            background: #111; border-bottom: 3px solid var(--red); position: sticky; top: 0; z-index: 1000;
+            padding: 20px 5%; background: #000; display: flex; justify-content: space-between; align-items: center;
+            border-bottom: 2px solid var(--red); position: relative;
         }
-        .logo-box { display: flex; align-items: center; gap: 10px; }
-        .logo-shape {
-            width: 35px; height: 35px; background: var(--black); border: 2px solid var(--yellow);
-            transform: rotate(45deg); box-shadow: 3px 3px 0px var(--red);
-        }
-        .logo-text { font-size: 20px; font-weight: 900; letter-spacing: 1px; }
+        header::after { content: ''; position: absolute; bottom: -2px; right: 0; width: 30%; height: 2px; background: var(--yellow); }
+        .logo { font-size: 24px; font-weight: 800; letter-spacing: 1px; }
+        .logo span { color: var(--red); }
+        .nav-icons { display: flex; gap: 15px; align-items: center; font-size: 14px; color: #888; }
 
         /* --- Hero Section --- */
-        .hero { text-align: center; padding: 80px 20px; background: radial-gradient(circle, #250000 0%, #080808 100%); }
-        .profile-wrap {
-            padding: 8px; border-radius: 50%; background: linear-gradient(45deg, var(--yellow), var(--red));
-            box-shadow: 0 0 25px rgba(255, 0, 0, 0.4); display: inline-block; margin-bottom: 20px;
+        .hero { display: flex; align-items: center; justify-content: center; padding: 60px 5%; gap: 40px; flex-wrap: wrap; text-align: left; }
+        .profile-border { 
+            width: 200px; height: 200px; border-radius: 50%; padding: 10px;
+            background: linear-gradient(to right, var(--yellow), var(--red));
+            box-shadow: 0 0 20px rgba(255, 59, 59, 0.3);
         }
-        .profile-img { width: 150px; height: 150px; border-radius: 50%; border: 3px solid #000; object-fit: cover; }
+        .profile-img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; border: 5px solid #000; }
+        .hero-text h2 { font-size: 20px; color: var(--white); font-weight: 400; }
+        .hero-text h1 { font-size: 40px; margin: 5px 0; }
+        .hero-text h1 span { color: var(--yellow); }
+        .hero-text p { color: #888; max-width: 400px; margin-bottom: 20px; }
+        .btn-get { background: var(--yellow); color: #000; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: bold; display: inline-block; }
 
-        /* --- Up-to-Down Skills (Clickable) --- */
-        .section-title { text-align: center; color: var(--yellow); margin: 40px 0; text-transform: uppercase; }
-        .skill-list { max-width: 700px; margin: 0 auto; padding: 0 20px; }
-        .skill-link { text-decoration: none; color: inherit; display: block; margin-bottom: 20px; }
-        .skill-card {
-            background: #121212; padding: 25px; border-radius: 12px;
-            display: flex; align-items: center; gap: 20px;
-            border-left: 6px solid var(--red); transition: 0.3s;
+        /* --- Large Up-to-Down Skills --- */
+        .section-label { padding: 40px 5% 20px; font-size: 22px; font-weight: 600; color: #fff; }
+        .skill-container { padding: 0 5%; display: flex; flex-direction: column; gap: 25px; }
+        .skill-card { 
+            background: var(--card); border-radius: 15px; display: flex; align-items: center; 
+            padding: 30px; text-decoration: none; color: white; transition: 0.3s;
+            position: relative; overflow: hidden; border-left: 10px solid var(--red);
         }
-        .skill-card:hover { transform: scale(1.02); background: #1a1a1a; border-left-color: var(--yellow); }
-        .skill-icon { font-size: 40px; color: var(--yellow); }
+        .skill-card:hover { transform: translateY(-5px); background: #252525; }
+        .skill-icon-box { background: #000; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 25px; font-size: 28px; color: var(--yellow); }
+        .skill-info h3 { font-size: 22px; margin-bottom: 5px; }
+        .skill-info p { color: #888; font-size: 14px; }
 
-        /* --- FOOTER (PERFECT SIDE-BY-SIDE) --- */
-        footer { 
-            background: #000; padding: 50px 5%; border-top: 4px solid var(--red); margin-top: 60px; 
+        /* --- Side-by-Side Footer (As per Image) --- */
+        .footer-grid { 
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 20px; padding: 50px 5%; background: #000; margin-top: 50px;
         }
-        .footer-container { 
-            display: flex; justify-content: space-between; align-items: flex-start;
-            flex-wrap: nowrap; gap: 20px; max-width: 1200px; margin: 0 auto;
-        }
-        .footer-col { flex: 1; }
-        .footer-col h4 { color: var(--yellow); margin-bottom: 15px; font-size: 1rem; text-transform: uppercase; }
-        .footer-col p, .footer-col a { color: #888; text-decoration: none; font-size: 0.85rem; margin-bottom: 8px; display: block; }
-        .social-row { display: flex; gap: 15px; }
-        .social-row a { font-size: 24px; }
-        .fa-facebook { color: #1877F2; } .fa-tiktok { color: #00f2ea; } .fa-whatsapp { color: #25D366; }
+        .footer-card { background: #161616; padding: 25px; border-radius: 10px; }
+        .footer-card h4 { color: var(--yellow); margin-bottom: 15px; font-size: 16px; }
+        .footer-card p, .footer-card a { color: #888; font-size: 13px; text-decoration: none; display: block; margin-bottom: 8px; }
+        .social-icons-row { display: flex; gap: 10px; margin-top: 15px; }
+        .social-icons-row i { font-size: 18px; color: var(--white); background: #333; padding: 10px; border-radius: 50%; }
 
         @media (max-width: 768px) {
-            .footer-container { flex-wrap: wrap; }
-            .footer-col { min-width: 45%; }
+            .hero { text-align: center; flex-direction: column; }
+            .footer-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo-box">
-            <div class="logo-shape"></div>
-            <div class="logo-text">AAMIR<span style="color:var(--red)">.</span>DIGITAL</div>
-        </div>
-        <div style="color:var(--white); font-size:24px;"><i class="fas fa-bars"></i></div>
+        <div class="logo">AAMIR<span>PRO</span></div>
+        <div class="nav-icons">menu | #farc-btn <i class="fas fa-info-circle"></i> <i class="fas fa-bars"></i></div>
     </header>
 
     <section class="hero">
-        <div class="profile-wrap">
+        <div class="profile-border">
             <img src="profile.jpg" alt="Aamir Ahmad" class="profile-img">
         </div>
-        <h1>Aamir <span style="color:var(--yellow)">Ahmad</span></h1>
-        <p>Digital Marketing Expert | 3 Years Experience</p>
+        <div class="hero-text">
+            <h2>I'm</h2>
+            <h1>Aamir <span>Ahmad</span></h1>
+            <p>Digital Marketing Expert | 3 Years of Experience in Facebook & TikTok Ads</p>
+            <a href="https://wa.me/923482066656" class="btn-get">GET IN TOUCH</a>
+        </div>
     </section>
 
-    <h2 class="section-title">Professional Skills</h2>
-
-    <div class="skill-list">
-        <a href="https://wa.me/923482066656?text=I'm interested in Facebook Ads" class="skill-link">
-            <div class="skill-card">
-                <div class="skill-icon"><i class="fab fa-facebook"></i></div>
-                <div>
-                    <h3>Facebook Ads Mastery</h3>
-                    <p>Click for details & strategy...</p>
-                </div>
+    <div class="section-label">Skills-section</div>
+    
+    <div class="skill-container">
+        <a href="facebook.html" class="skill-card">
+            <div class="skill-icon-box"><i class="fab fa-facebook-f"></i></div>
+            <div class="skill-info">
+                <h3>Facebook Ads Specialist</h3>
+                <p>Scaling e-commerce brands with 3 years data-driven strategies.</p>
             </div>
         </a>
 
-        <a href="https://wa.me/923482066656?text=I'm interested in TikTok Ads" class="skill-link">
-            <div class="skill-card">
-                <div class="skill-icon"><i class="fab fa-tiktok"></i></div>
-                <div>
-                    <h3>TikTok Marketing</h3>
-                    <p>Click to see viral growth plans...</p>
-                </div>
-            </div>
-        </a>
-    </div>
-
-    <footer>
-        <div class="footer-container">
-            <div class="footer-col">
-                <h4>Agency Info</h4>
-                <p>3 Years of experience in scaling brands globally via paid advertising.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Quick Contact</h4>
-                <a href="tel:03482066656">+92 348 2066656</a>
-                <a href="mailto:lftaamir8@gmail.com">lftaamir8@gmail.com</a>
-            </div>
-            <div class="footer-col">
-                <h4>Social Media</h4>
-                <div class="social-row">
-                    <a href="https://wa.me/923482066656"><i class="fab fa-whatsapp"></i></a>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-tiktok"></i></a>
-                </div>
+        <a href="tiktok.html" class="skill-card">
+            <div class="skill-icon-box"><i class="fab fa-tiktok"></i></div>
+            <div class="skill-info">
+                <h3>TikTok Marketing Expert</h3>
+                <p>Capturing market trends with viral ad creatives and high ROAS.</p>
             </div>
         </div>
-    </footer>
+    </div>
+
+    <div class="section-label">Contact & Socials</div>
+
+    <div class="footer-grid">
+        <div class="footer-card">
+            <h4>About Me</h4>
+            <p>Professional Digital Marketer specializing in paid advertising for 3 years.</p>
+            <p style="color:var(--yellow)">Contact: lftaamir8@gmail.com</p>
+        </div>
+        <div class="footer-card">
+            <h4>Contact</h4>
+            <p>Email: lftaamir8@gmail.com</p>
+            <p>WhatsApp: +92 348 2066656</p>
+        </div>
+        <div class="footer-card">
+            <h4>Social Presence</h4>
+            <p>Follow me on official platforms:</p>
+            <div class="social-icons-row">
+                <i class="fab fa-linkedin-in"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-whatsapp"></i>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>
