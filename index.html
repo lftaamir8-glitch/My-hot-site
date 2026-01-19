@@ -3,130 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aamir Pro | Digital Marketing Expert</title>
+    <title>Aamir Pro | Digital Agency</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --bg: #121212; --card: #1e1e1e; --red: #ff3b3b; --yellow: #ffcc00; --white: #ffffff; }
+        :root { --bg: #000000; --card-bg: #1a1a1a; --red: #ff3131; --yellow: #ffbd14; --text-gray: #a0a0a0; }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
-        body { background-color: var(--bg); color: var(--white); padding-bottom: 50px; }
+        body { background-color: #f0f0f0; color: white; }
+        .main-wrapper { background-color: var(--bg); max-width: 900px; margin: 0 auto; min-height: 100vh; overflow: hidden; }
 
-        /* --- Header Design (As per Image) --- */
+        /* --- Header: Exactly like Image --- */
         header { 
-            padding: 20px 5%; background: #000; display: flex; justify-content: space-between; align-items: center;
+            padding: 25px 40px; background: #111; display: flex; justify-content: space-between; align-items: center;
             border-bottom: 2px solid var(--red); position: relative;
         }
-        header::after { content: ''; position: absolute; bottom: -2px; right: 0; width: 30%; height: 2px; background: var(--yellow); }
-        .logo { font-size: 24px; font-weight: 800; letter-spacing: 1px; }
+        header::after { content: ''; position: absolute; bottom: -2px; right: 0; width: 35%; height: 2px; background: var(--yellow); }
+        .logo { font-size: 22px; font-weight: 800; color: white; }
         .logo span { color: var(--red); }
-        .nav-icons { display: flex; gap: 15px; align-items: center; font-size: 14px; color: #888; }
+        .nav-meta { display: flex; gap: 15px; font-size: 12px; color: #888; align-items: center; }
 
         /* --- Hero Section --- */
-        .hero { display: flex; align-items: center; justify-content: center; padding: 60px 5%; gap: 40px; flex-wrap: wrap; text-align: left; }
-        .profile-border { 
-            width: 200px; height: 200px; border-radius: 50%; padding: 10px;
-            background: linear-gradient(to right, var(--yellow), var(--red));
-            box-shadow: 0 0 20px rgba(255, 59, 59, 0.3);
+        .hero { display: flex; align-items: center; padding: 60px 40px; gap: 40px; background: radial-gradient(circle at 20%, #2a0505 0%, #000 70%); }
+        .profile-container { position: relative; }
+        .profile-glow { 
+            width: 180px; height: 180px; border-radius: 50%; padding: 8px;
+            background: linear-gradient(135deg, var(--yellow), var(--red));
+            box-shadow: 0 0 30px rgba(255, 49, 49, 0.4);
         }
-        .profile-img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; border: 5px solid #000; }
-        .hero-text h2 { font-size: 20px; color: var(--white); font-weight: 400; }
-        .hero-text h1 { font-size: 40px; margin: 5px 0; }
-        .hero-text h1 span { color: var(--yellow); }
-        .hero-text p { color: #888; max-width: 400px; margin-bottom: 20px; }
-        .btn-get { background: var(--yellow); color: #000; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: bold; display: inline-block; }
+        .profile-img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; border: 4px solid #000; }
+        .hero-info h2 { font-size: 22px; font-weight: 400; color: #fff; }
+        .hero-info h1 { font-size: 38px; font-weight: 800; margin: 5px 0; }
+        .hero-info h1 span { color: var(--yellow); }
+        .hero-info p { color: var(--text-gray); font-size: 14px; margin-bottom: 25px; line-height: 1.6; max-width: 350px; }
+        .btn-touch { background: var(--yellow); color: black; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: 800; font-size: 14px; }
 
-        /* --- Large Up-to-Down Skills --- */
-        .section-label { padding: 40px 5% 20px; font-size: 22px; font-weight: 600; color: #fff; }
-        .skill-container { padding: 0 5%; display: flex; flex-direction: column; gap: 25px; }
-        .skill-card { 
-            background: var(--card); border-radius: 15px; display: flex; align-items: center; 
-            padding: 30px; text-decoration: none; color: white; transition: 0.3s;
-            position: relative; overflow: hidden; border-left: 10px solid var(--red);
+        /* --- Skills Section (Bigger & Vertical) --- */
+        .section-tag { padding: 40px 40px 20px; font-size: 20px; font-weight: 700; color: #fff; }
+        .skills-grid { padding: 0 40px; display: flex; flex-direction: column; gap: 20px; }
+        .skill-tile { 
+            background: var(--card-bg); border-radius: 12px; display: flex; align-items: center;
+            padding: 35px; text-decoration: none; color: white; border-left: 8px solid var(--red);
+            transition: 0.3s; position: relative;
         }
-        .skill-card:hover { transform: translateY(-5px); background: #252525; }
-        .skill-icon-box { background: #000; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 25px; font-size: 28px; color: var(--yellow); }
-        .skill-info h3 { font-size: 22px; margin-bottom: 5px; }
-        .skill-info p { color: #888; font-size: 14px; }
+        .skill-tile:hover { transform: scale(1.02); background: #222; }
+        .icon-circle { width: 60px; height: 60px; background: #000; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 26px; color: var(--yellow); margin-right: 25px; }
+        .skill-tile h3 { font-size: 20px; margin-bottom: 5px; }
+        .skill-tile p { font-size: 13px; color: var(--text-gray); }
 
-        /* --- Side-by-Side Footer (As per Image) --- */
-        .footer-grid { 
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-            gap: 20px; padding: 50px 5%; background: #000; margin-top: 50px;
+        /* --- Footer Tiles (Side by Side) --- */
+        .footer-tiles { 
+            display: grid; grid-template-columns: repeat(3, 1fr); 
+            gap: 15px; padding: 40px; background: #000; margin-top: 40px;
         }
-        .footer-card { background: #161616; padding: 25px; border-radius: 10px; }
-        .footer-card h4 { color: var(--yellow); margin-bottom: 15px; font-size: 16px; }
-        .footer-card p, .footer-card a { color: #888; font-size: 13px; text-decoration: none; display: block; margin-bottom: 8px; }
-        .social-icons-row { display: flex; gap: 10px; margin-top: 15px; }
-        .social-icons-row i { font-size: 18px; color: var(--white); background: #333; padding: 10px; border-radius: 50%; }
+        .f-box { background: #111; padding: 25px; border-radius: 10px; border-bottom: 3px solid transparent; }
+        .f-box:hover { border-bottom-color: var(--red); }
+        .f-box h4 { color: var(--yellow); font-size: 14px; margin-bottom: 15px; text-transform: uppercase; }
+        .f-box p, .f-box a { color: var(--text-gray); font-size: 12px; text-decoration: none; display: block; margin-bottom: 8px; line-height: 1.5; }
+        .f-icons { display: flex; gap: 10px; margin-top: 15px; }
+        .f-icons i { font-size: 16px; color: white; background: #222; width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; border-radius: 50%; }
 
         @media (max-width: 768px) {
-            .hero { text-align: center; flex-direction: column; }
-            .footer-grid { grid-template-columns: 1fr; }
+            .hero { flex-direction: column; text-align: center; }
+            .hero-info p { margin: 0 auto 25px; }
+            .footer-tiles { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
+<div class="main-wrapper">
     <header>
         <div class="logo">AAMIR<span>PRO</span></div>
-        <div class="nav-icons">menu | #farc-btn <i class="fas fa-info-circle"></i> <i class="fas fa-bars"></i></div>
+        <div class="nav-meta">menu | #farc-btn <i class="fas fa-info-circle"></i> <i class="fas fa-bars"></i></div>
     </header>
 
     <section class="hero">
-        <div class="profile-border">
-            <img src="profile.jpg" alt="Aamir Ahmad" class="profile-img">
+        <div class="profile-container">
+            <div class="profile-glow">
+                <img src="profile.jpg" alt="Aamir Ahmad" class="profile-img">
+            </div>
         </div>
-        <div class="hero-text">
+        <div class="hero-info">
             <h2>I'm</h2>
             <h1>Aamir <span>Ahmad</span></h1>
             <p>Digital Marketing Expert | 3 Years of Experience in Facebook & TikTok Ads</p>
-            <a href="https://wa.me/923482066656" class="btn-get">GET IN TOUCH</a>
+            <a href="https://wa.me/923482066656" class="btn-touch">GET IN TOUCH</a>
         </div>
     </section>
 
-    <div class="section-label">Skills-section</div>
-    
-    <div class="skill-container">
-        <a href="facebook.html" class="skill-card">
-            <div class="skill-icon-box"><i class="fab fa-facebook-f"></i></div>
-            <div class="skill-info">
+    <div class="section-tag">Skills-section</div>
+    <div class="skills-grid">
+        <a href="facebook.html" class="skill-tile">
+            <div class="icon-circle"><i class="fab fa-facebook-f"></i></div>
+            <div class="s-text">
                 <h3>Facebook Ads Specialist</h3>
-                <p>Scaling e-commerce brands with 3 years data-driven strategies.</p>
+                <p>Scaling e-commerce brands with 3 years data-driven strategies. (Click to see more)</p>
             </div>
         </a>
 
-        <a href="tiktok.html" class="skill-card">
-            <div class="skill-icon-box"><i class="fab fa-tiktok"></i></div>
-            <div class="skill-info">
+        <a href="tiktok.html" class="skill-tile">
+            <div class="icon-circle"><i class="fab fa-tiktok"></i></div>
+            <div class="s-text">
                 <h3>TikTok Marketing Expert</h3>
-                <p>Capturing market trends with viral ad creatives and high ROAS.</p>
+                <p>Viral ad product hunting and high ROAS management. (Click to see more)</p>
             </div>
-        </div>
+        </a>
     </div>
 
-    <div class="section-label">Contact & Socials</div>
-
-    <div class="footer-grid">
-        <div class="footer-card">
+    <div class="section-tag">Footer grid</div>
+    <div class="footer-tiles">
+        <div class="f-box">
             <h4>About Me</h4>
-            <p>Professional Digital Marketer specializing in paid advertising for 3 years.</p>
-            <p style="color:var(--yellow)">Contact: lftaamir8@gmail.com</p>
+            <p>Professional Digital Marketer specializing in paid advertising for local and international brands.</p>
         </div>
-        <div class="footer-card">
+        <div class="f-box">
             <h4>Contact</h4>
-            <p>Email: lftaamir8@gmail.com</p>
+            <a href="mailto:lftaamir8@gmail.com">lftaamir8@gmail.com</a>
             <p>WhatsApp: +92 348 2066656</p>
         </div>
-        <div class="footer-card">
+        <div class="f-box">
             <h4>Social Presence</h4>
-            <p>Follow me on official platforms:</p>
-            <div class="social-icons-row">
+            <div class="f-icons">
                 <i class="fab fa-linkedin-in"></i>
                 <i class="fab fa-instagram"></i>
-                <i class="fab fa-facebook-f"></i>
                 <i class="fab fa-whatsapp"></i>
+                <i class="fab fa-facebook-f"></i>
             </div>
         </div>
     </div>
+</div>
 
 </body>
 </html>
