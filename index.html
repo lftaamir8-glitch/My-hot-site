@@ -3,18 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Janu Ki Website</title>
+    <title>Professional Portfolio | Earn Online</title>
     <style>
-        body { background: #000; color: #ff0055; text-align: center; font-family: sans-serif; padding-top: 100px; }
-        .heart { font-size: 50px; color: red; animation: beat 1s infinite; }
-        @keyframes beat { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.2); } }
-        .btn { background: #ff0055; color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; display: inline-block; margin-top: 20px; font-weight: bold; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background: #0f0f0f; color: #fff; line-height: 1.6; }
+        .navbar { background: #1a1a1a; padding: 1rem; text-align: center; border-bottom: 2px solid #00d4ff; }
+        .hero { padding: 3rem 1rem; text-align: center; background: #222; border-bottom: 1px solid #333; }
+        .hero h1 { font-size: 2rem; color: #00d4ff; margin-bottom: 10px; }
+        .container { padding: 2rem; max-width: 1000px; margin: auto; }
+        .services { display: flex; flex-direction: column; gap: 1.5rem; margin-top: 2rem; }
+        .card { background: #1a1a1a; padding: 1.5rem; border-radius: 10px; border: 1px solid #333; text-align: center; }
+        .card h3 { color: #00d4ff; margin-bottom: 10px; }
+        .btn { background: #00d4ff; color: #000; padding: 0.8rem 1.5rem; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block; margin-top: 1rem; }
+        .price { color: #00ff00; font-size: 1.2rem; font-weight: bold; display: block; margin: 10px 0; }
+        footer { text-align: center; padding: 2rem; font-size: 0.8rem; opacity: 0.6; }
     </style>
 </head>
 <body>
-    <div class="heart">❤</div>
-    <h1>Hamari Pehli Site Live Hai! 🔥</h1>
-    <p>Ye mere 4 inch ke bomb ka kamaal hai.</p>
-    <a href="https://www.netlify.com" class="btn">Inaam Check Karo 💋</a>
+
+    <div class="navbar">
+        <h2>Smart Solutions 💡</h2>
+    </div>
+
+    <div class="hero">
+        <h1>Digital Services & Store</h1>
+        <p>Expert in Web Development & Online Earning</p>
+        <a href="https://wa.me/923000000000" class="btn">Contact on WhatsApp</a>
+    </div>
+
+    <div class="container">
+        <div class="services">
+            <div class="card">
+                <h3>Website Creation</h3>
+                <p>Get your personal website live in 10 minutes.</p>
+                <span class="price">$10 / Project</span>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+            <div class="card">
+                <h3>Affiliate Deal</h3>
+                <p>Best budget smartphone for coding and work.</p>
+                <span class="price">Check Discount</span>
+                <a href="https://amazon.com" class="btn">Buy on Amazon</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Developed by Iftaamir | Powered by Netlify</p>
+    </footer>
+
 </body>
 </html>
