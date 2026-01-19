@@ -10,7 +10,7 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
         body { background-color: var(--black); color: var(--white); }
 
-        /* --- 3D Agency Logo (Black, Yellow, Red Mix) --- */
+        /* --- Agency Logo (Black, Yellow, Red Mix) --- */
         header { 
             padding: 15px 5%; 
             display: flex; justify-content: space-between; align-items: center; 
@@ -19,60 +19,66 @@
         }
         .logo-box { display: flex; align-items: center; gap: 10px; }
         .logo-shape {
-            width: 40px; height: 40px;
-            background: var(--black);
-            border: 3px solid var(--yellow);
-            position: relative;
-            transform: rotate(45deg);
-            box-shadow: 3px 3px 0px var(--red); /* 3D effect */
+            width: 38px; height: 38px;
+            background: var(--black); border: 3px solid var(--yellow);
+            position: relative; transform: rotate(45deg);
+            box-shadow: 3px 3px 0px var(--red);
         }
         .logo-shape::after {
-            content: 'A'; transform: rotate(-45deg);
-            position: absolute; top: 5px; left: 8px;
-            color: var(--yellow); font-weight: 900; font-size: 20px;
+            content: ''; position: absolute; width: 10px; height: 10px;
+            background: var(--red); top: 11px; left: 11px; border-radius: 2px;
         }
-        .logo-text { font-size: 22px; font-weight: 900; color: var(--white); letter-spacing: 1px; }
+        .logo-text { font-size: 22px; font-weight: 900; color: var(--white); }
 
-        /* --- Profile Picture Look (Hero Section) --- */
+        /* --- Hero Section --- */
         .hero { text-align: center; padding: 80px 20px; background: radial-gradient(circle, #220000 0%, #080808 100%); }
         .profile-wrap {
-            position: relative; display: inline-block;
-            padding: 10px; border-radius: 50%;
+            position: relative; display: inline-block; padding: 8px; border-radius: 50%;
             background: linear-gradient(45deg, var(--yellow), var(--red));
-            box-shadow: 0 0 30px rgba(255, 0, 0, 0.4);
-            margin-bottom: 20px;
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.4); margin-bottom: 20px;
         }
-        .profile-img { width: 170px; height: 170px; border-radius: 50%; border: 4px solid var(--black); object-fit: cover; }
+        .profile-img { width: 160px; height: 160px; border-radius: 50%; border: 4px solid var(--black); object-fit: cover; }
         
-        /* --- Professional Up-to-Down Skills --- */
+        /* --- Vertical Skills --- */
         .section-title { text-align: center; color: var(--yellow); margin: 50px 0; font-size: 2rem; text-transform: uppercase; }
-        .skill-list { max-width: 800px; margin: 0 auto; padding: 0 20px; }
+        .skill-list { max-width: 700px; margin: 0 auto; padding: 0 20px; }
         .skill-item {
-            background: #121212; padding: 35px; border-radius: 20px;
-            margin-bottom: 25px; display: flex; align-items: center; gap: 25px;
-            border-right: 10px solid var(--red); /* Professional look */
-            box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
-            transition: 0.3s;
+            background: #121212; padding: 30px; border-radius: 15px;
+            margin-bottom: 20px; display: flex; align-items: center; gap: 20px;
+            border-left: 6px solid var(--red); box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
         }
-        .skill-item:hover { transform: scale(1.02); border-right-color: var(--yellow); }
-        .skill-icon { font-size: 50px; }
+        .skill-icon { font-size: 40px; min-width: 60px; text-align: center; }
 
-        /* --- Side-by-Side Footer Adjustments --- */
-        footer { background: #000; padding: 60px 5% 30px; border-top: 4px solid var(--red); margin-top: 60px; }
-        .footer-flex { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px; }
-        .footer-col { flex: 1; min-width: 280px; }
-        .footer-col h4 { color: var(--yellow); margin-bottom: 20px; font-size: 1.2rem; }
-        .footer-col p, .footer-col a { color: #888; text-decoration: none; margin-bottom: 12px; display: block; }
+        /* --- FOOTER SETTINGS (SIDE-BY-SIDE) --- */
+        footer { 
+            background: #000; padding: 60px 5% 30px; 
+            border-top: 4px solid var(--red); margin-top: 60px; 
+        }
+        .footer-container { 
+            display: flex; 
+            flex-direction: row; /* Force Side-by-Side */
+            justify-content: space-between; 
+            flex-wrap: wrap; /* Mobile par automatic adjust hoga */
+            gap: 30px; max-width: 1100px; margin: 0 auto;
+        }
+        .footer-col { 
+            flex: 1; 
+            min-width: 200px; /* Take equal space */
+        }
+        .footer-col h4 { color: var(--yellow); margin-bottom: 20px; font-size: 1.1rem; text-transform: uppercase; }
+        .footer-col p, .footer-col a { color: #888; text-decoration: none; margin-bottom: 10px; display: block; font-size: 0.9rem; }
         
-        /* Original Brand Icons Colors */
-        .social-row { display: flex; gap: 25px; margin-top: 20px; }
-        .social-row a { font-size: 32px; }
-        .fa-facebook { color: #1877F2; } 
-        .fa-tiktok { color: #00f2ea; } 
-        .fa-whatsapp { color: #25D366; }
+        .social-row { display: flex; gap: 20px; margin-top: 15px; }
+        .social-row a { font-size: 28px; transition: 0.3s; }
+        .fa-facebook { color: #1877F2; } .fa-tiktok { color: #00f2ea; } .fa-whatsapp { color: #25D366; }
 
-        .cta-btn { background: var(--yellow); color: black; padding: 16px 40px; border-radius: 8px; text-decoration: none; font-weight: 900; display: inline-block; transition: 0.3s; }
-        .cta-btn:hover { background: var(--red); color: white; transform: translateY(-3px); }
+        .copyright { text-align: center; color: #333; margin-top: 40px; padding-top: 20px; border-top: 1px solid #111; }
+        
+        @media (max-width: 600px) {
+            .footer-container { flex-direction: column; text-align: center; }
+            .social-row { justify-content: center; }
+            .skill-item { flex-direction: column; text-align: center; }
+        }
     </style>
 </head>
 <body>
@@ -80,7 +86,7 @@
     <header>
         <div class="logo-box">
             <div class="logo-shape"></div>
-            <div class="logo-text">AAMIR<span style="color:var(--yellow)">.</span>DIGITAL</div>
+            <div class="logo-text">AAMIR<span style="color:var(--red)">.</span>PRO</div>
         </div>
         <div style="color:var(--yellow); font-size:24px;"><i class="fas fa-bars"></i></div>
     </header>
@@ -89,52 +95,43 @@
         <div class="profile-wrap">
             <img src="profile.jpg" alt="Aamir Ahmad" class="profile-img">
         </div>
-        <h1 style="font-size: 2.8rem; margin: 15px 0;">Aamir <span style="color:var(--yellow)">Ahmad</span></h1>
-        <p style="color:#bbb; font-size: 1.1rem; margin-bottom: 30px;">3 Years Experience | Expert in Scaling E-commerce Brands</p>
-        <a href="https://wa.me/923482066656" class="cta-btn">WORK WITH ME</a>
+        <h1>Aamir <span style="color:var(--yellow)">Ahmad</span></h1>
+        <p style="color:#bbb; margin: 15px 0 30px;">3 Years Experience | Digital Marketing Specialist</p>
+        <a href="https://wa.me/923482066656" style="background:var(--yellow); color:black; padding:15px 30px; text-decoration:none; font-weight:bold; border-radius:5px;">HIRE ME</a>
     </section>
 
-    <h2 class="section-title">My Specialization</h2>
+    <h2 class="section-title">My Skills</h2>
 
     <div class="skill-list">
         <div class="skill-item">
             <div class="skill-icon"><i class="fab fa-facebook"></i></div>
             <div>
-                <h3 style="color:var(--yellow); margin-bottom:10px;">Facebook Ads Expert</h3>
-                <p>3 years of data-driven results in scaling Facebook & Instagram campaigns.</p>
+                <h3 style="color:var(--yellow)">Facebook Ads</h3>
+                <p>Scaling e-commerce stores with advanced targeting.</p>
             </div>
         </div>
-
         <div class="skill-item">
             <div class="skill-icon"><i class="fab fa-tiktok"></i></div>
             <div>
-                <h3 style="color:var(--yellow); margin-bottom:10px;">TikTok Marketing</h3>
-                <p>Leveraging TikTok's viral potential for massive ROAS and brand awareness.</p>
-            </div>
-        </div>
-
-        <div class="skill-item">
-            <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
-            <div>
-                <h3 style="color:var(--yellow); margin-bottom:10px;">E-commerce Management</h3>
-                <p>A-Z store management and growth strategies for Shopify & local brands.</p>
+                <h3 style="color:var(--yellow)">TikTok Ads</h3>
+                <p>Viral marketing and creative ad strategies.</p>
             </div>
         </div>
     </div>
 
     <footer>
-        <div class="footer-flex">
+        <div class="footer-container">
             <div class="footer-col">
-                <h4>About The Expert</h4>
-                <p>Aamir Ahmad is a results-oriented marketer with 3 years of hands-on experience in the digital space.</p>
+                <h4>Experience</h4>
+                <p>3 Years of helping businesses grow through paid advertising and data-driven results.</p>
             </div>
             <div class="footer-col">
-                <h4>Contact Details</h4>
+                <h4>Contact</h4>
                 <a href="tel:03482066656">Call: +92 348 2066656</a>
-                <a href="mailto:lftaamir8@gmail.com">Email: lftaamir8@gmail.com</a>
+                <a href="mailto:lftaamir8@gmail.com">lftaamir8@gmail.com</a>
             </div>
             <div class="footer-col">
-                <h4>Social Platforms</h4>
+                <h4>Socials</h4>
                 <div class="social-row">
                     <a href="https://wa.me/923482066656"><i class="fab fa-whatsapp"></i></a>
                     <a href="#"><i class="fab fa-facebook"></i></a>
@@ -142,7 +139,7 @@
                 </div>
             </div>
         </div>
-        <p style="text-align:center; color:#333; margin-top:50px; border-top:1px solid #111; padding-top:20px;">© 2026 Aamir Ahmad | Built for Success</p>
+        <div class="copyright">© 2026 Aamir Ahmad | Digital Specialist</div>
     </footer>
 
 </body>
