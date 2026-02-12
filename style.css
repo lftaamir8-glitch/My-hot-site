@@ -1,0 +1,114 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Arial, sans-serif;
+scroll-behavior: smooth;
+}
+
+body {
+background: linear-gradient(135deg, #000000, #1a0000);
+color: white;
+}
+
+nav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px 10%;
+background: black;
+}
+
+.logo {
+color: #ff0000;
+font-size: 22px;
+}
+
+.hero {
+text-align: center;
+padding: 80px 20px;
+}
+
+.profile {
+width: 170px;
+border-radius: 50%;
+border: 4px solid #ffcc00;
+margin-bottom: 20px;
+}
+
+h1 {
+color: #ffcc00;
+margin-bottom: 10px;
+}
+
+.btn {
+padding: 10px 18px;
+background: #ff0000;
+color: white;
+text-decoration: none;
+border-radius: 6px;
+margin-left: 10px;
+transition: 0.3s;
+}
+
+.btn:hover {
+background: #ffcc00;
+color: black;
+}
+
+section {
+padding: 70px 10%;
+text-align: center;
+}
+
+.stats {
+display: flex;
+justify-content: center;
+gap: 50px;
+flex-wrap: wrap;
+}
+
+.stat h2 {
+color: #ffcc00;
+font-size: 40px;
+}
+
+.accordion-item {
+margin: 15px auto;
+max-width: 600px;
+}
+
+.accordion-btn {
+width: 100%;
+padding: 15px;
+background: #111;
+color: #ffcc00;
+border: none;
+cursor: pointer;
+text-align: left;
+font-size: 16px;
+border-left: 4px solid #ff0000;
+}
+
+.accordion-content {
+display: none;
+padding: 15px;
+background: #1a1a1a;
+}
+
+footer {
+background: black;
+padding: 20px;
+}
+
+.whatsapp-float {
+position: fixed;
+bottom: 20px;
+right: 20px;
+background: #25D366;
+color: white;
+font-size: 24px;
+padding: 12px 16px;
+border-radius: 50%;
+text-decoration: none;
+}
